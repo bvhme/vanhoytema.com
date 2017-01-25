@@ -13,266 +13,6 @@ Heyhey, thanks for looking at the source, it's a bit hacky because it was done i
     <meta charset="UTF-8">
     
     <title>Boris van Hoytema</title>
-    <style>
-        *,
-        *:before,
-        *:after {
-            -moz-box-sizing: border-box;
-            -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-            cursor: default;
-        }
-        /* Small screens (default) */
-        
-        html {
-            font-size: 100%;
-        }
-        /* Medium screens (640px) */
-        
-        @media (min-width: 40rem) {
-            html {
-                font-size: 112%;
-            }
-        }
-        /* Large screens (1024px) */
-        
-        @media (min-width: 64rem) {
-            html {
-                font-size: 120%;
-            }
-        }
-        
-        body {
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            font-weight: 400;
-            background: white;
-        }
-        
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6,
-        b,
-        strong {
-            margin: 2em 0 1em 0;
-            font-weight: 500;
-            clear: both;
-        }
-        
-        a,
-        a:visited {
-            color: hsla(213, 37%, 49%, 1);
-            cursor: pointer;
-            text-decoration: none;
-        }
-        
-        a:hover {
-            background: hsla(213, 37%, 49%, 0.1);
-        }
-        
-        h2 {
-            margin: 1em 0;
-            padding: 1em 0;
-            border-bottom: 3px solid black;
-        }
-        
-        img {
-            max-width: 20em;
-        }
-        
-        @media (max-width: 30rem) {
-            img {
-                max-width: 100%;
-            }
-        }
-        
-        @media (min-width: 64rem) {
-            img {
-                float: right;
-                margin: 0 0 4em 4em;
-            }
-        }
-        
-        main {
-            margin: 0 auto;
-            max-width: 48rem;
-            width: 90%;
-        }
-        
-        header,
-        footer {
-            text-align: center;
-            margin: 2em 0;
-            clear: both;
-        }
-        
-        header img.avatar {
-            float: none;
-            margin: 2em 0 0 0;
-            border-radius: 999rem;
-            width: 5.5em;
-            height: 5.5em;
-        }
-        
-        footer p {
-            font-size: 75%;
-        }
-        
-        nav {
-            margin: 0 auto;
-            max-width: 48rem;
-            width: 90%;
-            text-align: center;
-        }
-        
-        nav ul {
-            list-style: none;
-            margin: 0 auto;
-            padding: 0;
-        }
-        
-        nav ul li {
-            display: inline-block;
-        }
-        
-        nav ul li a,
-        header nav ul li a:visited {
-            /*border-radius: 999rem;*/
-            
-            padding: 0.75em;
-            line-height: 2;
-            /*background: rgba( 74, 144, 226, 0.10);*/
-        }
-        
-        article {
-          clear: both;
-        }
-        
-        #Work .announcement {
-            font-weight: 500;
-            text-align: center;
-            padding: 0 1em 1em 1em;
-        }
-        
-        #Work h3.intro {
-            font-weight: 400;
-        }
-        
-        #Work .client,
-        #Work .role,
-        #Work .medium,
-        #Work .team,
-        #Work .timeline,
-        #Currently .client,
-        #Currently .role,
-        #Currently .medium,
-        #Currently .team{
-            margin-left: 7em;
-        }
-        
-        #Work .label,
-        #Currently .label{
-            font-weight: 500;
-            min-width: 7em;
-            margin-left: -7em;
-            display: inline;
-            float: left;
-            clear: left;
-        }
-        
-        #Skills {}
-        
-        #Skills p.legend {
-            text-align: center;
-        }
-        
-        #Skills ol {
-            list-style: none;
-            padding: none;
-        }
-        
-        #Skills li,
-        .legend span {
-            display: inline-block;
-            border-bottom: 3px solid black;
-            padding: 0.5em;
-            margin: 0.25em;
-        }
-        
-        #Skills .software {
-            border-color: hsla(353, 53%, 53%, 1);
-            background: hsla(353, 53%, 53%, .05);
-        }
-        
-        #Skills .tech {
-            border-color: hsla(55, 71%, 61%, 1);
-            background: hsla(55, 71%, 61%, .05);
-        }
-        
-        #Skills .skill {
-            border-color: hsla(89, 73%, 48%, 1);
-            background: hsla(89, 73%, 48%, .05);
-        }
-        
-        #Skills .selected {
-            opacity: 0.25;
-            background: white;
-        }
-        
-        #Profile ul {
-            list-style: none;
-            padding: 0;
-        }
-        
-        #Profile .label {
-            display: inline-block;
-            min-width: 7em;
-            font-weight: 500;
-        }
-        
-        @media print {
-            body {
-                font-size: 85%;
-            }
-            nav {
-                display: none;
-            }
-            article {
-                page-break-inside: avoid;
-            }
-            a,
-            a:visited {
-                color: black;
-            }
-            p.legend {
-                font-size: 75%;
-                margin: 0;
-                padding: 0;
-            }
-            img {
-                float: right;
-                margin: 0 0 4em 4em;
-                max-width: 33%;
-            }
-            .avatar {
-                margin: 0;
-            }
-            footer,
-            main {
-                margin-bottom: 0;
-            }
-        }
-    </style>
-    <script>
-        function toggle(target) {
-            var classchange = document.getElementsByClassName(target);
-            for (var i = 0; i < classchange.length; i++) {
-                classchange[i].classList.toggle("selected")
-            }
-        }
-    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="image_src" href="photos/boris-avatar.jpeg" />
     <meta property="og:title" content="Boris van Hoytema" />
@@ -657,6 +397,267 @@ Heyhey, thanks for looking at the source, it's a bit hacky because it was done i
                 <strong>Boris van&nbsp;Hoytema</strong>. Photographs by The Lisbon Council, Matt Cottam, Jordi Huisman, VPRO, AVRO, De Balie, Rafe Copeland and Boris&nbsp;van Hoytema.</p>
         </footer>
     </main>
+    
+    <style>
+        *,
+        *:before,
+        *:after {
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            cursor: default;
+        }
+        /* Small screens (default) */
+        
+        html {
+            font-size: 100%;
+        }
+        /* Medium screens (640px) */
+        
+        @media (min-width: 40rem) {
+            html {
+                font-size: 112%;
+            }
+        }
+        /* Large screens (1024px) */
+        
+        @media (min-width: 64rem) {
+            html {
+                font-size: 120%;
+            }
+        }
+        
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-weight: 400;
+            background: white;
+        }
+        
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        b,
+        strong {
+            margin: 2em 0 1em 0;
+            font-weight: 500;
+            clear: both;
+        }
+        
+        a,
+        a:visited {
+            color: hsla(213, 37%, 49%, 1);
+            cursor: pointer;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            background: hsla(213, 37%, 49%, 0.1);
+        }
+        
+        h2 {
+            margin: 1em 0;
+            padding: 1em 0;
+            border-bottom: 3px solid black;
+        }
+        
+        img {
+            max-width: 20em;
+        }
+        
+        @media (max-width: 30rem) {
+            img {
+                max-width: 100%;
+            }
+        }
+        
+        @media (min-width: 64rem) {
+            img {
+                float: right;
+                margin: 0 0 4em 4em;
+            }
+        }
+        
+        main {
+            margin: 0 auto;
+            max-width: 48rem;
+            width: 90%;
+        }
+        
+        header,
+        footer {
+            text-align: center;
+            margin: 2em 0;
+            clear: both;
+        }
+        
+        header img.avatar {
+            float: none;
+            margin: 2em 0 0 0;
+            border-radius: 999rem;
+            width: 5.5em;
+            height: 5.5em;
+        }
+        
+        footer p {
+            font-size: 75%;
+        }
+        
+        nav {
+            margin: 0 auto;
+            max-width: 48rem;
+            width: 90%;
+            text-align: center;
+        }
+        
+        nav ul {
+            list-style: none;
+            margin: 0 auto;
+            padding: 0;
+        }
+        
+        nav ul li {
+            display: inline-block;
+        }
+        
+        nav ul li a,
+        header nav ul li a:visited {
+            /*border-radius: 999rem;*/
+            
+            padding: 0.75em;
+            line-height: 2;
+            /*background: rgba( 74, 144, 226, 0.10);*/
+        }
+        
+        article {
+          clear: both;
+        }
+        
+        #Work .announcement {
+            font-weight: 500;
+            text-align: center;
+            padding: 0 1em 1em 1em;
+        }
+        
+        #Work h3.intro {
+            font-weight: 400;
+        }
+        
+        #Work .client,
+        #Work .role,
+        #Work .medium,
+        #Work .team,
+        #Work .timeline,
+        #Currently .client,
+        #Currently .role,
+        #Currently .medium,
+        #Currently .team{
+            margin-left: 7em;
+        }
+        
+        #Work .label,
+        #Currently .label{
+            font-weight: 500;
+            min-width: 7em;
+            margin-left: -7em;
+            display: inline;
+            float: left;
+            clear: left;
+        }
+        
+        #Skills {}
+        
+        #Skills p.legend {
+            text-align: center;
+        }
+        
+        #Skills ol {
+            list-style: none;
+            padding: none;
+        }
+        
+        #Skills li,
+        .legend span {
+            display: inline-block;
+            border-bottom: 3px solid black;
+            padding: 0.5em;
+            margin: 0.25em;
+        }
+        
+        #Skills .software {
+            border-color: hsla(353, 53%, 53%, 1);
+            background: hsla(353, 53%, 53%, .05);
+        }
+        
+        #Skills .tech {
+            border-color: hsla(55, 71%, 61%, 1);
+            background: hsla(55, 71%, 61%, .05);
+        }
+        
+        #Skills .skill {
+            border-color: hsla(89, 73%, 48%, 1);
+            background: hsla(89, 73%, 48%, .05);
+        }
+        
+        #Skills .selected {
+            opacity: 0.25;
+            background: white;
+        }
+        
+        #Profile ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        #Profile .label {
+            display: inline-block;
+            min-width: 7em;
+            font-weight: 500;
+        }
+        
+        @media print {
+            body {
+                font-size: 85%;
+            }
+            nav {
+                display: none;
+            }
+            article {
+                page-break-inside: avoid;
+            }
+            a,
+            a:visited {
+                color: black;
+            }
+            p.legend {
+                font-size: 75%;
+                margin: 0;
+                padding: 0;
+            }
+            img {
+                float: right;
+                margin: 0 0 4em 4em;
+                max-width: 33%;
+            }
+            .avatar {
+                margin: 0;
+            }
+            footer,
+            main {
+                margin-bottom: 0;
+            }
+        }
+    </style>
+    <script>
+        function toggle(target) {
+            var classchange = document.getElementsByClassName(target);
+            for (var i = 0; i < classchange.length; i++) {
+                classchange[i].classList.toggle("selected")
+            }
+        }
+    </script>
 </body>
 
 </html>
