@@ -25,7 +25,7 @@ Heyhey, thanks for looking at the source, it's a bit hacky because it was done i
         <header>
             <img src="photos/boris-avatar.jpeg" class="avatar">
             <h1>Boris van&nbsp;Hoytema</h1>
-            <p>Media &nbsp;&nbsp;|&nbsp;&nbsp; Technology &nbsp;&nbsp;|&nbsp;&nbsp; Future</p>
+            <p>Technology&nbsp;|&nbsp;Cities&nbsp;|&nbsp;Media</p>
             <nav>
                 <ul>
                     <li><a href="#Work">Work</a></li>
@@ -37,24 +37,25 @@ Heyhey, thanks for looking at the source, it's a bit hacky because it was done i
         </header>
         
         <section id="Currently">
-        
-            <h2>Currently</h2>            
-            <p class="announcement">I'm available for work, advising and consulting.</p>
-            
+
+            <h2>Currently</h2>
+            <p class="announcement">I'm working to establish the <a href="http://vurb.foundation/">Vurb.Foundation</a> as an open source provider and repository for policy and technology that can improve cities and urban communities. With this we're starting the <a href="http://vurb.agency/">Vurb.Agency</a> as a company specialised in builing software and help develop strong open source cultures for urban government and communities.</p>
+
         </section>
             
         <section id="Work">
             
             <h2>Work</h2>
-            <h3 class="intro">I help people, teams and organisations understand what they are doing, their future, and how they should solve the problems at hand on the intersection of media and technology.</h3>
-            
+            <h3 class="intro">My mission is: To help society progress and create the future it wants, harnessing the ever increasing pace of technological and social change.</h3>
+
             <article>
+                <p class="timeline"><span class="label">2017—</span>Co-founder <a href="http://vurb.foundation/">Vurb.Foundation</a> and <a href="http://vurb.agency/">Vurb.Agency</a>.</p>
                 <p class="timeline"><span class="label">2015—2017</span>Founder, Managing Director: <a href="http://www.newatoms.com/">New Atoms</a>.</p>
-                <p class="timeline"><span class="label">2013-2015</span>Editorial Consultant, Designer, Programmer, Producer: <a href="http://www.bbc.com/news">BBC News</a>.</p>
-                <p class="timeline"><span class="label">2012-2013</span>Partner, Consultant: <a href="http://non-fiction.nl">Non-Fiction, Office for Cultural Innovation</a>.</p>
-                <p class="timeline"><span class="label">2009-2012</span>Programme maker new audiences: national dutch broadcaster <a href="http://vpro.nl">VPRO</a>.</p>
-                <p class="timeline"><span class="label">2006-2009</span>Founder: Denkstof, small digital and events consultancy.</p>
-                <p class="timeline"><span class="label">1992-2006</span>“Education.”</p>
+                <p class="timeline"><span class="label">2013—2015</span>Editorial Consultant, Designer, Programmer, Producer: <a href="http://www.bbc.com/news">BBC News</a>.</p>
+                <p class="timeline"><span class="label">2012—2013</span>Partner, Consultant: <a href="http://non-fiction.nl">Non-Fiction, Office for Cultural Innovation</a>.</p>
+                <p class="timeline"><span class="label">2009—2012</span>Programme maker new audiences: national dutch broadcaster <a href="http://vpro.nl">VPRO</a>.</p>
+                <p class="timeline"><span class="label">2006—2009</span>Founder: Denkstof, small digital and events consultancy.</p>
+                <p class="timeline"><span class="label">1992—2006</span>“Education.”</p>
                 <p class="timeline"><span class="label">1988</span>Born in Amsterdam.</p>
               <p>A short selection of notable past larger projects:</p>
             </article>
@@ -502,6 +503,11 @@ Heyhey, thanks for looking at the source, it's a bit hacky because it was done i
             width: 90%;
         }
         
+
+        p, h1, h2, h3, h4, h5, h6 {
+          max-width: 35em;
+        }
+
         header,
         footer {
             text-align: center;
@@ -516,7 +522,11 @@ Heyhey, thanks for looking at the source, it's a bit hacky because it was done i
             width: 5.5em;
             height: 5.5em;
         }
-        
+
+        header p, footer p {
+            display: inline-block; /* To center the element with the content of the header and footer */
+        }
+
         footer p {
             font-size: 75%;
         }
