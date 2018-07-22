@@ -444,14 +444,15 @@ Heyhey, thanks for looking at the source, it's a bit hacky because it was done i
         }
 
         a,
+        a:link,
         a:visited {
-            color: hsla(213, 37%, 49%, 1);
             cursor: pointer;
             text-decoration: none;
         }
 
         a:hover {
-            background: hsla(213, 37%, 49%, 0.1);
+            background: lightgrey;
+            color: black;
         }
 
         h1 {
@@ -669,6 +670,7 @@ Heyhey, thanks for looking at the source, it's a bit hacky because it was done i
         }
 
     </style>
+    <style id="linkColor">a, a:link, a:hover { color: hsla(213, 37%, 49%, 1); }</style>
     <script>
         function toggle(target) {
             var classchange = document.getElementsByClassName(target);
@@ -676,6 +678,28 @@ Heyhey, thanks for looking at the source, it's a bit hacky because it was done i
                 classchange[i].classList.toggle("selected")
             }
         }
+        
+        function changeLinkColor() {
+            var style = document.getElementById('linkColor')
+            var color = 0
+            
+            var textContent = style.textContent
+            if (!textContent == "") {
+                var colorRegex = /hsla\((([0-9])*),/i
+                color = parseInt(textContent.match(colorRegex)[1])
+            }
+
+            if (color > 359) {
+                color = 0
+            } else {
+                color = color + 1
+            }
+
+            style.textContent = "a, a:link, a:hover { color: hsla(" + color + ", 37%, 49%, 1); }"
+            window.setTimeout(changeLinkColor, 500)
+        }
+
+        changeLinkColor()
     </script>
 </body>
 
