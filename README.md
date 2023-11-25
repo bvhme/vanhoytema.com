@@ -1,6 +1,6 @@
-# bvh.me
+# Website
 
-This is my website at [bvh.me](http://bvh.me).
+This is my website at [vanhoytema.com](https://www.vanhoytema.com).
 
 ## Contributing
 
